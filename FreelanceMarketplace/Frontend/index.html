@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelance Marketplace Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"></div>
+                FreelanceSphere
+            </a>
+            <ul class="nav-links" id="nav-right">
+                <!-- Nav Links will be populated by script.js dynamically based on session -->
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div id="alert-box" class="alert-box"></div>
+
+        <section class="hero">
+            <h1>Find Expert Freelancers for Your Next Big Project</h1>
+            <p>Connect with top-rated talent worldwide. Post projects, receive competitive bids, and collaborate securely with automated milestones.</p>
+            <div class="hero-buttons">
+                <a href="register.html" class="btn btn-primary">Get Started</a>
+                <a href="projects.html" class="btn btn-secondary">Browse Work</a>
+            </div>
+        </section>
+
+        <section style="margin-bottom: 4rem;">
+            <h2 style="font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Featured Freelancers</h2>
+            <div class="grid-3" id="featured-freelancers-list">
+                <!-- Dynamic Content via API -->
+                <div style="text-align: center; color: var(--text-muted); grid-column: 1/-1;">Loading expert profiles...</div>
+            </div>
+        </section>
+
+        <section style="margin-bottom: 2rem;">
+            <h2 style="font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Recent Projects</h2>
+            <div class="grid-3" id="featured-projects-list">
+                <!-- Dynamic Content via API -->
+                <div style="text-align: center; color: var(--text-muted); grid-column: 1/-1;">Loading project catalog...</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FreelanceSphere. Designed for the Major Project Examination. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

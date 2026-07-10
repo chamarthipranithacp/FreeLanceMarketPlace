@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - FreelanceSphere</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"></div>
+                FreelanceSphere
+            </a>
+            <ul class="nav-links" id="nav-right">
+                <!-- Navigation links loaded dynamically -->
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div id="alert-box" class="alert-box"></div>
+
+        <div class="dashboard-grid">
+            <!-- Sidebar Panel: Profile Control -->
+            <aside class="card" style="align-self: start; padding: 1.5rem;">
+                <h3 style="margin-bottom: 1.25rem; font-size: 1.2rem; border-bottom: 1px solid var(--border-card); padding-bottom: 0.5rem;">My Profile</h3>
+                
+                <form id="profile-form">
+                    <div class="form-group">
+                        <label for="profile-email">Email Address</label>
+                        <input type="email" id="profile-email" class="form-control" readonly style="opacity: 0.6; cursor: not-allowed;">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="profile-phone">Phone Number</label>
+                        <input type="text" id="profile-phone" class="form-control" required>
+                    </div>
+
+                    <!-- Freelancer Specific Inputs -->
+                    <div id="profile-freelancer-fields">
+                        <div class="form-group">
+                            <label for="profile-freelancer-name">Full Name</label>
+                            <input type="text" id="profile-freelancer-name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-freelancer-skills">Skills (Comma separated)</label>
+                            <input type="text" id="profile-freelancer-skills" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-freelancer-experience">Experience (Years)</label>
+                            <input type="number" id="profile-freelancer-experience" class="form-control" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-freelancer-rate">Hourly Rate ($/hr)</label>
+                            <input type="number" id="profile-freelancer-rate" class="form-control" min="1">
+                        </div>
+                    </div>
+
+                    <!-- Client Specific Inputs -->
+                    <div id="profile-client-fields" style="display: none;">
+                        <div class="form-group">
+                            <label for="profile-client-company">Company Name</label>
+                            <input type="text" id="profile-client-company" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-client-contact">Contact Person</label>
+                            <input type="text" id="profile-client-contact" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-client-location">Location</label>
+                            <input type="text" id="profile-client-location" class="form-control">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Update Profile</button>
+                </form>
+
+                <div style="margin-top: 2rem; border-top: 1px solid rgba(239,68,68,0.2); padding-top: 1.5rem; text-align: center;">
+                    <button class="btn btn-danger" style="background-color: transparent; border: 1px solid var(--accent-red); color: var(--accent-red); width:100%;" onclick="handleDeleteProfile()">Delete Profile</button>
+                </div>
+            </aside>
+
+            <!-- Main Panel: Activities & Tables -->
+            <section style="display: flex; flex-direction: column; gap: 2rem;">
+                
+                <!-- CLIENT DASHBOARD LAYOUT -->
+                <div id="dashboard-client-view" style="display: none;">
+                    <h2 style="font-size: 1.75rem; margin-bottom: 1.5rem;">Client Control Panel</h2>
+                    
+                    <div class="stats-row">
+                        <div class="stat-card">
+                            <h3>Projects Posted</h3>
+                            <div class="stat-val" id="client-stat-projects">0</div>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Bids Received</h3>
+                            <div class="stat-val" id="client-stat-bids">0</div>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Active Contracts</h3>
+                            <div class="stat-val" id="client-stat-contracts">0</div>
+                        </div>
+                    </div>
+
+                    <!-- Client Projects List -->
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <h3 style="margin-bottom: 1rem;">My Posted Projects</h3>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Title</th>
+                                        <th>Category</th>
+                                        <th>Budget</th>
+                                        <th>Deadline</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="client-projects-body">
+                                    <!-- Populated via API -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Client Bids Received -->
+                    <div class="card">
+                        <h3 style="margin-bottom: 1rem;">Bids Received on Projects</h3>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Bid ID</th>
+                                        <th>Project Title</th>
+                                        <th>Freelancer</th>
+                                        <th>Bid Amount</th>
+                                        <th>Proposal Pitch</th>
+                                        <th>Status / Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="client-bids-body">
+                                    <!-- Populated via API -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FREELANCER DASHBOARD LAYOUT -->
+                <div id="dashboard-freelancer-view" style="display: none;">
+                    <h2 style="font-size: 1.75rem; margin-bottom: 1.5rem;">Freelancer Control Panel</h2>
+
+                    <div class="stats-row">
+                        <div class="stat-card">
+                            <h3>Bids Submitted</h3>
+                            <div class="stat-val" id="free-stat-applied">0</div>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Active Contracts</h3>
+                            <div class="stat-val" id="free-stat-contracts">0</div>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Completed Earnings</h3>
+                            <div class="stat-val" id="free-stat-earnings">$0</div>
+                        </div>
+                    </div>
+
+                    <!-- Freelancer Bids Table -->
+                    <div class="card">
+                        <h3 style="margin-bottom: 1rem;">My Submitted Bids</h3>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Bid ID</th>
+                                        <th>Project Title</th>
+                                        <th>Bid Amount</th>
+                                        <th>Proposal Details</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="free-bids-body">
+                                    <!-- Populated via API -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FreelanceSphere. Designed for the Major Project Examination.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - FreelanceSphere</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"></div>
+                FreelanceSphere
+            </a>
+            <ul class="nav-links" id="nav-right">
+                <!-- Dynamic Navigation -->
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div id="alert-box" class="alert-box"></div>
+
+        <div class="auth-wrapper">
+            <div class="card">
+                <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem; text-align: center;">Sign In</h2>
+                
+                <form id="login-form">
+                    <div class="form-group">
+                        <label>Select Your Workspace Role</label>
+                        <div style="display: flex; gap: 2rem; margin-top: 0.5rem;">
+                            <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; color: var(--text-primary);">
+                                <input type="radio" name="login-role" value="freelancer" checked style="accent-color: var(--accent-blue);"> Freelancer
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; color: var(--text-primary);">
+                                <input type="radio" name="login-role" value="client" style="accent-color: var(--accent-blue);"> Client
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="login-email">Registered Email Address</label>
+                        <input type="email" id="login-email" class="form-control" placeholder="e.g. rahul@gmail.com" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem; padding: 0.8rem;">Enter Platform</button>
+                </form>
+
+                <p style="margin-top: 1.5rem; text-align: center; font-size: 0.9rem; color: var(--text-secondary);">
+                    Don't have an account? <a href="register.html" style="color: var(--accent-blue); text-decoration: none; font-weight: 600;">Register here</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FreelanceSphere. Designed for the Major Project Examination.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

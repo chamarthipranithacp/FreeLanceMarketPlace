@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Bid - FreelanceSphere</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"></div>
+                FreelanceSphere
+            </a>
+            <ul class="nav-links" id="nav-right">
+                <!-- Navigation links loaded dynamically -->
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div id="alert-box" class="alert-box"></div>
+
+        <div class="auth-wrapper" style="max-width: 600px; margin: 3rem auto;">
+            <div class="card">
+                <h2 style="font-size: 1.75rem; margin-bottom: 1.5rem; text-align: center;">Submit Proposal</h2>
+                
+                <form id="submit-bid-form">
+                    <div class="form-group">
+                        <label for="bid-project-title">Project Name</label>
+                        <input type="text" id="bid-project-title" class="form-control" placeholder="Project name" required readonly style="opacity: 0.8; cursor: not-allowed;">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bid-amount">Your Bid Amount ($)</label>
+                        <input type="number" id="bid-amount" class="form-control" min="1" placeholder="e.g. 45000" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bid-proposal">Proposal Pitch</label>
+                        <textarea id="bid-proposal" class="form-control" placeholder="Describe why you are the best fit for this project, your timeline, deliverables, etc..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.8rem; margin-top: 1rem;">Submit Proposal</button>
+                </form>
+
+                <div style="text-align: center; margin-top: 1.5rem;">
+                    <a href="projects.html" style="color: var(--text-secondary); text-decoration: none; font-size: 0.9rem;">&larr; Back to Catalog</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FreelanceSphere. Designed for the Major Project Examination.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

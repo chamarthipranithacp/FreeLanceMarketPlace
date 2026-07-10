@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Projects - FreelanceSphere</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"></div>
+                FreelanceSphere
+            </a>
+            <ul class="nav-links" id="nav-right">
+                <!-- Navigation links loaded dynamically -->
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div id="alert-box" class="alert-box"></div>
+
+        <!-- Post Project Panel (Only visible to Clients) -->
+        <section id="post-project-card" class="card" style="margin-bottom: 3rem; display: none;">
+            <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Post a New Project</h2>
+            <form id="post-project-form">
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label for="proj-title">Project Title</label>
+                        <input type="text" id="proj-title" class="form-control" placeholder="e.g. E-Commerce Website Development" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="proj-cat">Project Category</label>
+                        <select id="proj-cat" class="form-control" required>
+                            <option value="Web Development">Web Development</option>
+                            <option value="Graphic Design">Graphic Design</option>
+                            <option value="Content Writing">Content Writing</option>
+                            <option value="Digital Marketing">Digital Marketing</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="proj-desc">Detailed Description</label>
+                    <textarea id="proj-desc" class="form-control" placeholder="Describe the project scope, required skills, and expectations..." required></textarea>
+                </div>
+
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label for="proj-budget">Project Budget ($)</label>
+                        <input type="number" id="proj-budget" class="form-control" min="5" placeholder="e.g. 50000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="proj-deadline">Project Deadline</label>
+                        <input type="date" id="proj-deadline" class="form-control" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-success" style="width: 100%; padding: 0.8rem; margin-top: 0.5rem;">Publish Project</button>
+            </form>
+        </section>
+
+        <!-- Search and Catalog section -->
+        <section>
+            <h2 style="font-size: 1.75rem; margin-bottom: 1.5rem;">Available Projects</h2>
+            
+            <div class="filter-bar">
+                <input type="text" id="search-project" class="form-control search-input" placeholder="Search by project name or description...">
+                <select id="filter-category" class="form-control" style="width: 250px;">
+                    <option value="">All Categories</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Graphic Design">Graphic Design</option>
+                    <option value="Content Writing">Content Writing</option>
+                    <option value="Digital Marketing">Digital Marketing</option>
+                </select>
+            </div>
+
+            <div class="grid-2" id="projects-list">
+                <!-- Loaded dynamically via Fetch -->
+                <div style="text-align: center; color: var(--text-muted); grid-column: 1/-1;">Loading available projects...</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FreelanceSphere. Designed for the Major Project Examination.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

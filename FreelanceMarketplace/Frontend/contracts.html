@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Contracts - FreelanceSphere</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"></div>
+                FreelanceSphere
+            </a>
+            <ul class="nav-links" id="nav-right">
+                <!-- Navigation links loaded dynamically -->
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div id="alert-box" class="alert-box"></div>
+
+        <section class="card">
+            <h2 style="font-size: 1.75rem; margin-bottom: 1.5rem;">Milestone Agreements & Contracts</h2>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Contract ID</th>
+                            <th>Project Title</th>
+                            <th>Partner Name</th>
+                            <th>Agreed Budget</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contracts-body">
+                        <!-- Populated dynamically via script.js -->
+                        <tr><td colspan="8" style="text-align:center; color:var(--text-muted);">Loading agreement contracts...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FreelanceSphere. Designed for the Major Project Examination.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

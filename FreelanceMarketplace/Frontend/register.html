@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - FreelanceSphere</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"></div>
+                FreelanceSphere
+            </a>
+            <ul class="nav-links" id="nav-right">
+                <!-- Dynamic Navigation -->
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div id="alert-box" class="alert-box"></div>
+
+        <div class="auth-wrapper" style="max-width: 550px;">
+            <div class="card">
+                <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem; text-align: center;">Create Account</h2>
+                
+                <form id="register-form">
+                    <!-- Role Toggle -->
+                    <div class="form-group">
+                        <label>Register As</label>
+                        <div style="display: flex; gap: 2rem; margin-top: 0.5rem; margin-bottom: 1rem;">
+                            <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; color: var(--text-primary);">
+                                <input type="radio" name="register-role" value="freelancer" checked style="accent-color: var(--accent-blue);"> Freelancer
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; color: var(--text-primary);">
+                                <input type="radio" name="register-role" value="client" style="accent-color: var(--accent-blue);"> Client
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Shared Fields -->
+                    <div class="form-group">
+                        <label for="register-email">Email Address</label>
+                        <input type="email" id="register-email" class="form-control" placeholder="e.g. name@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="register-phone">Phone Number</label>
+                        <input type="text" id="register-phone" class="form-control" placeholder="e.g. 9876543210" required>
+                    </div>
+
+                    <!-- Freelancer Dynamic Fields -->
+                    <div id="freelancer-fields">
+                        <div class="form-group">
+                            <label for="freelancer-name">Full Name</label>
+                            <input type="text" id="freelancer-name" class="form-control" placeholder="e.g. Rahul Sharma" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="freelancer-skills">Professional Skills (Comma Separated)</label>
+                            <input type="text" id="freelancer-skills" class="form-control" placeholder="e.g. Django, React, Python" required>
+                        </div>
+                        <div class="grid-2">
+                            <div class="form-group">
+                                <label for="freelancer-experience">Experience (Years)</label>
+                                <input type="number" id="freelancer-experience" class="form-control" min="0" placeholder="e.g. 3" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="freelancer-rate">Hourly Rate ($/hr)</label>
+                                <input type="number" id="freelancer-rate" class="form-control" min="1" placeholder="e.g. 25" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Client Dynamic Fields -->
+                    <div id="client-fields" style="display: none;">
+                        <div class="form-group">
+                            <label for="client-company">Company Name</label>
+                            <input type="text" id="client-company" class="form-control" placeholder="e.g. Tech Solutions Pvt Ltd">
+                        </div>
+                        <div class="form-group">
+                            <label for="client-contact">Contact Person</label>
+                            <input type="text" id="client-contact" class="form-control" placeholder="e.g. Anjali Verma">
+                        </div>
+                        <div class="form-group">
+                            <label for="client-location">Company Location</label>
+                            <input type="text" id="client-location" class="form-control" placeholder="e.g. Bangalore">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem; padding: 0.8rem;">Complete Registration</button>
+                </form>
+
+                <p style="margin-top: 1.5rem; text-align: center; font-size: 0.9rem; color: var(--text-secondary);">
+                    Already have an account? <a href="login.html" style="color: var(--accent-blue); text-decoration: none; font-weight: 600;">Sign in</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FreelanceSphere. Designed for the Major Project Examination.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
