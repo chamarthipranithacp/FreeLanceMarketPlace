@@ -2,13 +2,11 @@
 
 A **Full Stack Freelance Marketplace Platform** developed using **Django**, **Django REST Framework**, **HTML**, **CSS**, and **JavaScript**. The platform enables clients to post freelance projects and allows freelancers to browse projects, submit bids, and manage their profiles through a REST API-based architecture.
 
----
 
 ## 📌 Project Overview
 
 The **Freelance Marketplace Platform** is a web application that connects clients and freelancers in a centralized system. It provides secure and efficient management of freelancers, clients, projects, and bids through complete CRUD operations. The backend is built using Django REST Framework, while the frontend is developed with HTML, CSS, and JavaScript.
 
----
 
 ## 🚀 Features
 
@@ -36,7 +34,6 @@ The **Freelance Marketplace Platform** is a web application that connects client
 - Update Bid Details
 - Delete Bids
 
----
 
 ## 🛠️ Tech Stack
 
@@ -59,7 +56,6 @@ The **Freelance Marketplace Platform** is a web application that connects client
 - Git
 - GitHub
 
----
 
 ## 📁 Project Structure
 
@@ -87,7 +83,6 @@ FreeLanceMarketPlace/
 └── README.md
 ```
 
----
 
 ## ⚙️ Installation
 
@@ -125,7 +120,6 @@ pip install djangorestframework
 pip install django-cors-headers
 ```
 
----
 
 ## ▶️ Running the Project
 
@@ -156,7 +150,6 @@ http://127.0.0.1:8000/
 
 Open the frontend pages using the **Live Server** extension in Visual Studio Code.
 
----
 
 ## 🔗 REST API Endpoints
 
@@ -196,7 +189,6 @@ Open the frontend pages using the **Live Server** extension in Visual Studio Cod
 | PUT | `/bids/update/<id>/` | Update bid details |
 | DELETE | `/bids/delete/<id>/` | Delete a bid |
 
----
 
 # 📷 Project Screenshots
 
@@ -205,35 +197,30 @@ Open the frontend pages using the **Live Server** extension in Visual Studio Cod
 <img width="959" height="439" alt="image" src="https://github.com/user-attachments/assets/dc1f5706-29ce-4c6a-97f1-7b7c6bce391c" />
 
 
----
 
 ## 👨‍💻 Freelancer Registration
 
 <img width="329" height="399" alt="image" src="https://github.com/user-attachments/assets/d59ce8e1-e4b1-4a16-b61a-ac35c23631da" />
 
 
----
 
 ## 👤 Client Registration
 
 <img width="321" height="401" alt="image" src="https://github.com/user-attachments/assets/d491170f-ab31-44c9-933a-3ceb644bcc2f" />
 
 
----
 
 ## 📂 Project Management
 
 <img width="692" height="257" alt="image" src="https://github.com/user-attachments/assets/f6fee99e-fe53-4f88-9057-b61a570bdd8e" />
 
 
----
 
 ## 💰 Bid Management
 
 <img width="742" height="348" alt="image" src="https://github.com/user-attachments/assets/3d0c84d5-4e2c-4721-9890-fe4efc1380f5" />
 
 
----
 
 
 ## 💾 Database
@@ -245,7 +232,6 @@ The project uses **SQLite** as the database to store:
 - Project Details
 - Bid Details
 
----
 
 ## 🌟 Future Enhancements
 
@@ -260,7 +246,6 @@ The project uses **SQLite** as the database to store:
 - Admin Dashboard
 - Cloud Deployment (AWS/Render)
 
----
 
 ## 📚 Learning Outcomes
 
