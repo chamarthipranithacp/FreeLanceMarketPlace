@@ -202,39 +202,39 @@ Open the frontend pages using the **Live Server** extension in Visual Studio Cod
 
 ## 🏠 Home Page
 
-![Home Page](frontend/images/home.png)
+<img width="959" height="439" alt="image" src="https://github.com/user-attachments/assets/dc1f5706-29ce-4c6a-97f1-7b7c6bce391c" />
+
 
 ---
 
 ## 👨‍💻 Freelancer Registration
 
-![Freelancer Registration](frontend/images/register.png)
+<img width="329" height="399" alt="image" src="https://github.com/user-attachments/assets/d59ce8e1-e4b1-4a16-b61a-ac35c23631da" />
+
 
 ---
 
 ## 👤 Client Registration
 
-![Client Registration](frontend/images/client.png)
+<img width="321" height="401" alt="image" src="https://github.com/user-attachments/assets/d491170f-ab31-44c9-933a-3ceb644bcc2f" />
+
 
 ---
 
 ## 📂 Project Management
 
-![Projects](frontend/images/projects.png)
+<img width="692" height="257" alt="image" src="https://github.com/user-attachments/assets/f6fee99e-fe53-4f88-9057-b61a570bdd8e" />
+
 
 ---
 
 ## 💰 Bid Management
 
-![Bid Management](frontend/images/bids.png)
+<img width="742" height="348" alt="image" src="https://github.com/user-attachments/assets/3d0c84d5-4e2c-4721-9890-fe4efc1380f5" />
+
 
 ---
 
-## 📊 Dashboard
-
-![Dashboard](frontend/images/dashboard.png)
-
----
 
 ## 💾 Database
 
