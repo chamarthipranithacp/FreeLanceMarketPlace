@@ -271,6 +271,3 @@ The project uses **SQLite** as the database to store:
 - Managed relational data using Django ORM and SQLite.
 - Structured a scalable project using industry-standard practices.
 
-## ⭐ Support
-
-If you found this project helpful, please consider giving it a ⭐ on GitHub. Your support is greatly appreciated!
